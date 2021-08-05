@@ -47,6 +47,20 @@ void List1Print(Lista1 *l1){
 	}
 }
 
+void List1Search(Lista1 *l1, Item1 *d1){
+	Block1 *aux;
+
+	aux = l1->first->prox;
+	while(aux != NULL){
+		if(aux->data.id == d1->id){
+			printf("Produto: %s\n", aux->data.prd);
+			printf("ID: %d\n", aux->data.id);
+			printf("Quantidade: %d\n", aux->data.qtd);
+		}
+		aux = aux->prox;
+	}
+}
+
 void List2Print(Lista2 *l2){
 	Block2 *aux;
 
@@ -54,6 +68,19 @@ void List2Print(Lista2 *l2){
 	while(aux != NULL){
 		printf("Mercado: %s\n", aux->data.mercado);
 		printf("ID: %d\n", aux->data.idm);
+		aux = aux->prox;
+	}
+}
+
+void List2Search(Lista2 *l2, Item2 *d2){
+	Block2 *aux;
+
+	aux = l2->first->prox;
+	while(aux != NULL){
+		if(aux->data.idm == d2->idm){
+			printf("Mercado: %s\n", aux->data.mercado);
+			printf("ID: %d\n", aux->data.idm);
+		}
 		aux = aux->prox;
 	}
 }

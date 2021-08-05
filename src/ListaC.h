@@ -69,5 +69,7 @@ void List3Print(Lista3 *l3);
 void ListC1Insert(Lista1 *l1, Item1 d1);
 void ListC2Insert(Lista2 *l2, Item2 d2);
 void ListC3Insert(Lista3 *l3, Item3 d3);
+void List1Search(Lista1 *l1, Item1 *d1);
+void List2Search(Lista2 *l2, Item2 *d2);
 
 #endif

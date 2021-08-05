@@ -80,20 +80,27 @@ void ListC(Lista1 *l1, Lista2 *l2, Lista3 *l3){
 	Item2* m1 = malloc(sizeof(Item2));
 	Item2* m2 = malloc(sizeof(Item2));
 	Item2* m3 = malloc(sizeof(Item2));
+	Item3* v1 = malloc(sizeof(Item3));
+	Item3* v2 = malloc(sizeof(Item3));
+	Item3* v3 = malloc(sizeof(Item3));
+	Item3* v4 = malloc(sizeof(Item3));
+	Item3* v5 = malloc(sizeof(Item3));
+	Item3* v6 = malloc(sizeof(Item3));
+
 	p1->prd = "arroz";
-	p1->id = 10;
+	p1->id = 9;
 	p1->qtd = 5;
 	ListC1Insert(l1, *p1);
 	p2->prd = "feijao";
-	p2->id = 11;
+	p2->id = 8;
 	p2->qtd = 4;
 	ListC1Insert(l1, *p2);
 	p3->prd = "batata";
-	p3->id = 12;
+	p3->id = 7;
 	p3->qtd = 3;
 	ListC1Insert(l1, *p3);
 	p4->prd = "cenoura";
-	p4->id = 13;
+	p4->id = 6;
 	p4->qtd = 2;
 	ListC1Insert(l1, *p4);
 	m1->mercado = "ABC";
@@ -105,10 +112,77 @@ void ListC(Lista1 *l1, Lista2 *l2, Lista3 *l3){
 	m3->mercado = "Rena";
 	m3->idm = 3;		
 	ListC2Insert(l2, *m3);
-
-	List1Print(l1);
-	List2Print(l2);
-	List3Print(l3);
+	v1->pxm[0] = p1->id;
+	v1->pxm[1] = m1->idm;
+	v1->valor = 3.1;
+	ListC3Insert(l3, *v1);
+	v2->pxm[0] = p2->id;
+	v2->pxm[1] = m1->idm;
+	v2->valor = 2.1;
+	ListC3Insert(l3, *v2);
+	v3->pxm[0] = p1->id;
+	v3->pxm[1] = m2->idm;
+	v3->valor = 1.1;
+	ListC3Insert(l3, *v3);
+	v4->pxm[0] = p2->id;
+	v4->pxm[1] = m2->idm;
+	v4->valor = 4.1;
+	ListC3Insert(l3, *v4);
+	v5->pxm[0] = p1->id;
+	v5->pxm[1] = m3->idm;
+	v5->valor = 5.1;
+	ListC3Insert(l3, *v5);
+	v6->pxm[0] = p2->id;
+	v6->pxm[1] = m3->idm;
+	v6->valor = 6.1;
+	ListC3Insert(l3, *v6);
+	//List1Print(l1);
+	//List2Print(l2);
+	//List3Print(l3);
+	Block3 *aux;
+	Block3 *aux2;
+	aux2 = l3->first->prox;
+	aux = l3->first->prox;
+	while(aux != NULL){
+		if(aux->data.pxm[0] == 9){
+			Item1 d1;
+			d1.id = 9;
+			if(aux->data.valor > aux2->data.valor){
+				List1Search(l1, &d1);
+				printf("Preço: %.2f\n", aux2->data.valor);
+				//printf("%d\n", aux2->data.pxm[1]);
+				Item2 d2;
+				d2.idm = aux2->data.pxm[1];
+				List2Search(l2, &d2);
+			}else{
+				List1Search(l1, &d1);
+				printf("Preço: %.2f\n", aux->data.valor);
+				//printf("%d\n", aux->data.pxm[1]);
+				Item2 d2;
+				d2.idm = aux2->data.pxm[1];
+				List2Search(l2, &d2);
+			}
+		}else if(aux->data.pxm[0] == 8){
+			Item1 d1;
+			d1.id = 8;
+			if(aux->data.valor > aux2->data.valor){
+				List1Search(l1, &d1);
+				printf("Preço: %.2f\n", aux2->data.valor);
+				//printf("%d\n", aux2->data.pxm[1]);
+				Item2 d2;
+				d2.idm = aux2->data.pxm[1];
+				List2Search(l2, &d2);
+			}else{
+				List1Search(l1, &d1);
+				printf("Preço: %.2f\n", aux->data.valor);
+				//printf("%d\n", aux->data.pxm[1]);
+				Item2 d2;
+				d2.idm = aux2->data.pxm[1];
+				List2Search(l2, &d2);
+			}
+		}
+		aux = aux->prox;
+	}
 }	
 
 void ListMain(){
