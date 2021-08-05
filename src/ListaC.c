@@ -63,7 +63,7 @@ void List3Print(Lista3 *l3){
 
 	aux = l3->first->prox;
 	while(aux != NULL){
-		printf("PxM: %d\n", aux->data.pxm);
+		printf("PxM: %d,%d\n", aux->data.pxm[0], aux->data.pxm[1]);
 		printf("Valor: %.2f\n", aux->data.valor);
 		aux = aux->prox;
 	}

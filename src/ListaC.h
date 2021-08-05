@@ -28,7 +28,7 @@ struct Item2{
 };
 
 struct Item3{
-    int pxm;
+    int pxm[2];
 	float valor;
 };
 
