@@ -1,26 +1,5 @@
 #include "problema1.h"
 
-void EmptyList(Lista *l){
-	l->first = 0;
-	l->last  = 0;
-}
-
-void ListInsert(Lista *l, Item d){
-	if (l->last >= MAXTAM){
-		printf("LISTA CHEIA!\n");
-	}else{
-		l->vet[l->last] = d;
-		l->last ++;
-	}
-}
-
-void PrintList(Lista *l){
-    for(int i = l->first; i < l->last; i++){
-		printf("%d:%d\t", i,l->vet[i].val);
-		printf("\n");
-	}
-}
-
 void ListA(Lista *par, Lista *imp, Lista *conc){
 	int aux1 = 0;
 
@@ -56,82 +35,29 @@ void ListA(Lista *par, Lista *imp, Lista *conc){
 	}
 }
 
-void EmptyListB(Listab *l){
-	l->first = 0;
-	l->last  = 0;
-}
-
-void ListBInsert(Listab *l, Item d){
-	if (l->last >= MAXTAMB){
-		printf("LISTA CHEIA!\n");
-	}else{
-		l->vet[l->last] = d;
-		l->last ++;
-	}
-}
-
-void PrintListB(Listab *l1, Listab *l2){
-    for(int i = l1->first; i < l1->last; i++)
-		printf("(%d,%d)\t", l1->vet[i].val, l2->vet[i].val);
-	printf("\n");
-}
-
-void ListB(Listab *l1, Listab *l2){
-	int aux1 = 0;
-
-	srand((unsigned)time(NULL));
-	while(aux1 != MAXTAMB){
-		Item d;
-		d.val = rand()%13;
-		if(d.val != 0){
-			ListBInsert(l1, d);
-			aux1++;
-		}
-	}
-
-	int aux2 = 0;
-	while(aux2 != MAXTAMB){
-		Item d;
-		d.val = rand()%13;
-		if(d.val != 0){
-			ListBInsert(l2, d);
-			aux2++;
-		}
-	}	
-}
-
-void Swap(Item *a, Item *b){
-	Item aux;
-	aux = *a;
-	*a  = *b;
-	*b  = aux;
-}
-
-void ListBRemove(Listab *l, Item d){
-	bool ok = false;
-
-	if(l->first == l->last)
-		printf("LISTA VAZIA!\n");
-	else{
-		for(int i=l->first; i<l->last; i++)
-			if(l->vet[i].val == d.val){
-				Swap(&l->vet[i], &l->vet[i+1]);
-				ok = true;	
-			}
-		if(ok)
-			l->last --;
-	}
-}
-
-void GameB(Listab *l1, Listab *l2, int random){
+void GameB(Listab *l1, Listab *l2, Listab *l3, Listab *l4, int random){
 	int result1 = 0;
 	int result2 = 0;
+	int vet1[3],vet2[3];
 
 	for(int i = l1->first; i < l1->last; i++){
+		vet1[i] = random - l1->vet[i].val;
 		result1 = result1+(random - l1->vet[i].val);
 	}
 	for(int i = l2->first; i < l2->last; i++){
+		vet2[i] = random - l2->vet[i].val;
 		result2 = result2+(random - l2->vet[i].val); 
+	}
+
+	for(int i = 0; i < MAXTAMB; i++){
+		Item d;
+		d.val = vet1[i];
+		ListBInsert(l3, d);
+	}
+	for(int i = 0; i < MAXTAMB; i++){
+		Item d;
+		d.val = vet2[i];
+		ListBInsert(l4, d);
 	}
 
 	if(result1 > result2){
@@ -140,46 +66,17 @@ void GameB(Listab *l1, Listab *l2, int random){
 		printf("L2 é o ganhador! \n\n");
 	}else if(result1 == result2){
 		printf("Empate!");
-	}	
+	}
+	
+	PrintListB(l3,l4);
 }
 
-void EmptyListC(Lista1 *l1, Lista2 *l2, Lista3 *l3){
-	l1->first = (Block1*) malloc (sizeof(Block1));
-	l1->last  = l1->first;
-	l1->first->prox = NULL;
 
-	l2->first = (Block2*) malloc (sizeof(Block2));
-	l2->last  = l2->first;
-	l2->first->prox = NULL;
-
-	l3->first = (Block3*) malloc (sizeof(Block3));
-	l3->last  = l3->first;
-	l3->first->prox = NULL;
-}
-
-void List1Insert(Lista1 *l1, Item1 d1){
-	l1->last->prox = (Block1*) malloc (sizeof(Block1));
-	l1->last = l1->last->prox;
-	l1->last->data = d1;
-	l1->last->prox = NULL;
-}
-
-void List2Insert(Lista2 *l2, Item2 d2){
-	l2->last->prox = (Block2*) malloc (sizeof(Block2));
-	l2->last = l2->last->prox;
-	l2->last->data = d2;
-	l2->last->prox = NULL;
-}
-
-void List3Insert(Lista3 *l3, Item3 d3){
-	l3->last->prox = (Block3*) malloc (sizeof(Block3));
-	l3->last = l3->last->prox;
-	l3->last->data = d3;
-	l3->last->prox = NULL;
-}
-// void ListC(){
-
-// }
+void ListC(Lista1 *l1, Lista2 *l2, Lista3 *l3){
+	List1Print(l1);
+	List2Print(l2);
+	List3Print(l3);
+}	
 
 void ListMain(){
 	int op = 1;
@@ -219,12 +116,12 @@ void ListMain(){
 			op = 0;
 
 		}else if(op == 2){
-			Listab l1;
-			Listab l2;
+			Listab l1, l2, l3, l4;
 
 			EmptyListB(&l1);
 			EmptyListB(&l2);
-
+			EmptyListB(&l3);
+			EmptyListB(&l4);
 			ListB(&l1, &l2);
 			printf("L1 & L2: \n\n");
 			PrintListB(&l1, &l2);
@@ -235,12 +132,12 @@ void ListMain(){
 			printf("NUMERO RANDOMICO: %d", random);
 			printf("\n\n");
 
-			GameB(&l1, &l2, random);
+			GameB(&l1, &l2, &l3, &l4, random);
 
 			op = 0;
 		}else if(op == 3){
 			Lista1 l1;
-			Lista2 l2;
+			Lista2 l2; 
 			Lista3 l3;
 
 			EmptyListC(&l1, &l2, &l3);
@@ -249,29 +146,73 @@ void ListMain(){
 			Item1* p2 = malloc(sizeof(Item1));
 			Item1* p3 = malloc(sizeof(Item1));
 			Item1* p4 = malloc(sizeof(Item1));
-			p1->prd = "arroz";
-			p1->id = 10;
-			p1->qtd = 5;
-			p2->prd = "feijao";
-			p2->id = 11;
-			p2->qtd = 4;
-			p3->prd = "batata";
-			p3->id = 12;
-			p3->qtd = 3;
-			p4->prd = "cenoura";
-			p4->id = 13;
-			p4->qtd = 2;
 			Item2* m1 = malloc(sizeof(Item2));
 			Item2* m2 = malloc(sizeof(Item2));
 			Item2* m3 = malloc(sizeof(Item2));
+			Item3 *c1 = malloc(sizeof(Item3));
+			Item3 *c2 = malloc(sizeof(Item3));
+			Item3 *c3 = malloc(sizeof(Item3));
+			Item3 *c4 = malloc(sizeof(Item3));
+			Item3 *c5 = malloc(sizeof(Item3));
+			Item3 *c6 = malloc(sizeof(Item3));
+			Item3 *c7 = malloc(sizeof(Item3));
+			Item3 *c8 = malloc(sizeof(Item3));
+			Item3 *c9 = malloc(sizeof(Item3));
+			p1->prd = "arroz";
+			p1->id = 10;
+			p1->qtd = 5;
+			ListC1Insert(&l1, *p1);
+			p2->prd = "feijao";
+			p2->id = 11;
+			p2->qtd = 4;
+			ListC1Insert(&l1, *p2);
+			p3->prd = "batata";
+			p3->id = 12;
+			p3->qtd = 3;
+			ListC1Insert(&l1, *p3);
+			p4->prd = "cenoura";
+			p4->id = 13;
+			p4->qtd = 2;
+			ListC1Insert(&l1, *p4);
 			m1->mercado = "ABC";
 			m1->idm = 1;
+			ListC2Insert(&l2, *m1);
 			m2->mercado = "BH";
 			m2->idm = 2;
+			ListC2Insert(&l2, *m2);
 			m3->mercado = "Rena";
 			m3->idm = 3;
+			ListC2Insert(&l2, *m3);
+			c1->pxm = 101;
+			c1->valor = 3.1;
+			ListC3Insert(&l3, *c1);
+			c2->pxm = 102;
+			c2->valor = 4.1;
+			ListC3Insert(&l3, *c2);
+			c3->pxm = 103;
+			c3->valor = 5.1;
+			ListC3Insert(&l3, *c3);
+			c4->pxm = 111;
+			c4->valor = 4.1;
+			ListC3Insert(&l3, *c4);
+			c5->pxm = 112;
+			c5->valor = 3.1;
+			ListC3Insert(&l3, *c5);
+			c6->pxm = 113;
+			c6->valor = 5.1;
+			ListC3Insert(&l3, *c6);
+			c7->pxm = 121;
+			c7->valor = 6.1;
+			ListC3Insert(&l3, *c7);
+			c8->pxm = 122;
+			c8->valor = 4.1;
+			ListC3Insert(&l3, *c8);
+			c9->pxm = 123;
+			c9->valor = 3.1;
+			ListC3Insert(&l3, *c9);
 
-			
+			ListC(&l1, &l2, &l3);
+
 			op = 0;
 		}else if(op == 0){
 			printf("Finalizando programa!\n");
