@@ -8,6 +8,10 @@ typedef struct Itemf Itemf;
 typedef struct Blockf Blockf;
 typedef struct FilaD FilaD;
 
+typedef struct Itemfb Itemfb;
+typedef struct Blockfb Blockfb;
+typedef struct FilaDb FilaDb;
+
 typedef struct ItemR ItemR;
 typedef struct BlockR BlockR;
 typedef struct FilaDR FilaDR;
@@ -28,6 +32,21 @@ struct FilaD{
 	Blockf *last;
 };
 
+struct Itemfb{
+	int val;
+	int peso[5];
+};
+
+struct Blockfb{
+	Itemfb data;
+	Blockfb *prox;
+};
+
+struct FilaDb{
+	Blockfb *first;
+	Blockfb *last;
+};
+
 struct ItemR{
 	char *result;
 };
@@ -41,6 +60,10 @@ struct FilaDR{
 	BlockR *first;
 	BlockR *last;
 };
+
+void FilaBVazia(FilaDb *f);
+void EnfileiraB(FilaDb *f, Itemfb d);
+void FilaBImprime(FilaDb *f);
 
 void FilaResVazia(FilaDR *f);
 void EnfileiraRes(FilaDR *f, ItemR d);

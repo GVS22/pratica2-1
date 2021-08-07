@@ -36,6 +36,24 @@ void Binomio(int n, char x, char y, FilaDR *res){
     }
 }
 
+void FindClasse(FilaDb *f){
+    Blockfb *aux;
+    int max;
+	aux = f->first->prox;
+	while(aux != NULL){
+        max = aux->data.peso[0];
+        for (int i = 1; i < 5; i++){
+            //printf("%d\n", aux->data.peso[i]); 
+            if(aux->data.peso[i] >= max){
+                printf("%d\n", i);
+            }else{
+                printf("%d\n", 0);
+            }
+        }
+        aux = aux->prox;
+    }
+}
+
 void FilaMain(){
     int op; 
     printf("-------------------------------------\n");
@@ -71,7 +89,20 @@ void FilaMain(){
         FilaResImprime(&res);
         op = 0;
     }else if(op == 2){
-
+        FilaDb f;
+        FilaBVazia(&f);
+        srand((unsigned)time(NULL));
+        for(int i = 0; i < 10; i++){
+            Itemfb b;
+            b.val = (rand()%99)+1;
+            for (int j = 0; j < 5; j++){
+                b.peso[j] = (rand()%5)+1;
+            }
+            EnfileiraB(&f, b);
+        }
+        FilaBImprime(&f);
+        printf("\n");
+        FindClasse(&f);	
     }else if(op == 0){
         op = 0;
     }else{

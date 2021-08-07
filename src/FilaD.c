@@ -64,3 +64,32 @@ void FilaResImprime(FilaDR *f){
 		aux = aux->prox;
 	}
 }
+
+void FilaBVazia(FilaDb *f){
+	f->first = (Blockfb*) malloc (sizeof(Blockfb));
+	f->last  = f->first;
+	f->first->prox = NULL;
+}
+
+void EnfileiraB(FilaDb *f, Itemfb d){
+	f->last->prox = (Blockfb*) malloc (sizeof(Blockfb));
+	f->last = f->last->prox;
+	f->last->data = d;
+	f->last->prox = NULL;
+}
+
+void FilaBImprime(FilaDb *f){
+	Blockfb *aux;
+
+	aux = f->first->prox;
+	while(aux != NULL){
+		printf("\n");
+		printf("Atributo:\n");
+		printf("%d\n", aux->data.val);
+		printf("Vetor Peso:\n");
+		for(int i = 0; i < 5; i++)
+			printf("%d\t", aux->data.peso[i]);
+		printf("\n");
+		aux = aux->prox;
+	}
+}
