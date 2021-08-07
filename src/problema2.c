@@ -115,7 +115,7 @@ void PilhaMain(){
 			PilhaDImprime(&P2);
 			printf("\n");
 			Transfer(&P1, &P2);
-			printf("DEEPOIS\n");
+			printf("DEPOIS\n");
 			printf("P1: \n");
 			PilhaDImprime(&P1);
 			printf("\n");

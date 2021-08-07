@@ -11,6 +11,7 @@ int main(){
 		printf(" ------|(1) Listas           |-------\n");
 		printf(" ------|(2) Pilhas           |-------\n");
 		printf(" ------|(3) Filas            |-------\n");
+        printf(" ------|(4) Problema 4       |-------\n");
 		printf(" ------|(0) para sair        |-------\n");
 		printf("-------------------------------------\n");
 		scanf("%d", &op);
@@ -23,7 +24,10 @@ int main(){
             PilhaMain();
             op = 0;
         }else if(op == 3){
-            //FilaMain();
+            FilaMain();
+            op = 0;
+        }else if(op == 4){
+            op = 0;
         }
     } while (op != 0);
 
