@@ -509,6 +509,8 @@ for(int i = 0; i < 10; i++){
  ```
  #### Exemplo de execução: ####
  
-	
-	
-
+ ![menu](https://user-images.githubusercontent.com/60747654/128638930-e6440479-eb8e-4df0-8bd2-d5d0e24092af.PNG)
+ 
+ ![fila](https://user-images.githubusercontent.com/60747654/128638932-b179c3ed-68f4-4ac3-b105-701e225a4135.PNG)
+ 
+ ![class](https://user-images.githubusercontent.com/60747654/128638934-e60f4421-0f9f-4580-b6b1-1efeff9c17cd.PNG)
