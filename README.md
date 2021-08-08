@@ -70,7 +70,7 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 		ListInsert(conc, c);
 	}
     ```
-    #### Exemplos de execução: ####
+    #### Exemplo de execução: ####
     
     ![menu1](https://user-images.githubusercontent.com/60747654/128634479-7dece094-b740-4c6a-ab17-10adeacbf297.PNG)
     
@@ -155,6 +155,13 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 		PrintListB(l3,l4);
 	}
 	```
+	#### Exemplo de execução: ####
+	![menu1](https://user-images.githubusercontent.com/60747654/128635298-4a251c0b-0874-4a11-919a-e7e60ed5e3e2.PNG)
+	
+	![menu2](https://user-images.githubusercontent.com/60747654/128635302-c8e63a5c-be40-4fcb-8c89-378080c7d798.PNG)
+	
+	![game](https://user-images.githubusercontent.com/60747654/128635303-2dcd02e7-6381-4e6c-b5aa-9c706f57df1c.PNG)
+
 	
 - c) 
 
