@@ -1,5 +1,5 @@
-# Pratica 2 - Algoritmo e Estrutura de Dados #
-Trabalho realizado para a disciplina de Algoritmo e Estrutura de Dados \
+# Pratica 2 - Algoritmos e Estrutura de Dados #
+Trabalho realizado para a disciplina de Algoritmos e Estrutura de Dados \
 CEFET - MG Campus V \
 Jorge Vitor G. de Souza
 ## Compilar ##
@@ -463,6 +463,22 @@ void Binomio(int n, char x, char y, FilaDR *res){
 
 ![binomio](https://user-images.githubusercontent.com/60747654/128638471-ec27141d-5b9c-4660-83e0-8e9df2f2498d.PNG)
 
+- b) Para resolução do item b foi utilizada a mesma estrutura de fila dinâmica do item aterior, porém foram feitas adaptações na estrutura.
+	Neste caso a estrutura foi iniciada com 10 valores randomicos entre 1 e 99.
+```
+FilaDb f;
+FilaBVazia(&f);
+srand((unsigned)time(NULL));
+for(int i = 0; i < 10; i++){
+	Itemfb b;
+	b.val = (rand()%99)+1;
+	for (int j = 0; j < 5; j++){
+                b.peso[j] = (rand()%5)+1;
+        }
+	EnfileiraB(&f, b);
+ }
+ 
+ ```
 	
-- b)  
+	
 
