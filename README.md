@@ -117,6 +117,44 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 		printf("NUMERO RANDOMICO: %d", random);
 		printf("\n\n");
 	```
+	Por fim é chamado o método que executa o jogo:
+	```
+	void GameB(Listab *l1, Listab *l2, Listab *l3, Listab *l4, int random){
+		int result1 = 0;
+		int result2 = 0;
+		int vet1[3],vet2[3];
+
+		for(int i = l1->first; i < l1->last; i++){
+			vet1[i] = random - l1->vet[i].val;
+			result1 = result1+(random - l1->vet[i].val);
+		}
+		for(int i = l2->first; i < l2->last; i++){
+			vet2[i] = random - l2->vet[i].val;
+			result2 = result2+(random - l2->vet[i].val); 
+		}
+
+		for(int i = 0; i < MAXTAMB; i++){
+			Item d;
+			d.val = vet1[i];
+			ListBInsert(l3, d);
+		}
+		for(int i = 0; i < MAXTAMB; i++){
+			Item d;
+			d.val = vet2[i];
+			ListBInsert(l4, d);
+		}
+
+		if(result1 > result2){
+			printf("L1 é o ganhador! \n\n");
+		}else if(result2 > result1){
+			printf("L2 é o ganhador! \n\n");
+		}else if(result1 == result2){
+			printf("Empate!");
+		}
+	
+		PrintListB(l3,l4);
+	}
+	```
 	
 - c) 
 
