@@ -44,7 +44,19 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 
 ### Resolução ###
 
-- a Para a resolução do item a, foi implementada uma estrutura de lista estática devido a informação prévia do número de elementos
+- a Para a resolução do item a, foi implementada uma estrutura de lista estática devido a informação prévia do número de elementos.
+    Para o prenchimento da lista foi utilizado um metodo para gerar números randômicos entre 1 e 99. Por exemplo para gerar a lista de números pares:
+    ```
+    srand((unsigned)time(NULL));
+	  while(aux1 != MAXTAM){
+		  Item d;
+		  d.val = rand()%99;
+		  if(d.val % 2 == 0 && d.val != 0){
+			  ListInsert(par, d);
+			  aux1++;
+		  }
+	  }
+    ```
 - b 
 - c 
 
