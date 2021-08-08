@@ -47,6 +47,7 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 - a) Para a resolução do item a, foi implementada uma estrutura de lista estática devido a informação prévia do número de elementos.
     Para o prenchimento da lista foi utilizado um metodo para gerar números randômicos entre 1 e 99. Por exemplo para gerar a lista de números pares:
     ```
+    
     srand((unsigned)time(NULL));
     while(aux1 != MAXTAM){
 		  Item d;
@@ -84,7 +85,7 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 - b) Para a resolução do item b foi reutilizada a estrutura de lista estática do item anterior, porém foram feitas alterações para atender as questões levantadas no item.
 	Foi criada uma ListaB para tal, e um metódo que preenche com números aleatórios entre 1 e 13 as 3 posições da lista.
 	```
-void ListB(Listab *l1, Listab *l2){
+	void ListB(Listab *l1, Listab *l2){
 	int aux1 = 0;
 
 	srand((unsigned)time(NULL));
@@ -106,7 +107,7 @@ void ListB(Listab *l1, Listab *l2){
 			aux2++;
 		}
 	}	
-}
+	}
 	```
 	
 - c) 
