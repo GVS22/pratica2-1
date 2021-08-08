@@ -479,6 +479,35 @@ for(int i = 0; i < 10; i++){
  }
  
  ```
+ Por fim foi implementado um método que mostra a classe de determinado valor de acordo com o atributo de peso.
+ 
+ ```
+ void FindClasse(FilaDb *f, Itemfb *d){
+    Blockfb *aux;
+
+	aux = f->first->prox;
+	while(aux != NULL){
+        if(&aux->data == d){
+            int max = aux->data.peso[0];
+            int classe = 0;
+            for (int i = 1; i < 5; i++){
+                if(max < aux->data.peso[i]){
+                    max = aux->data.peso[i];
+                    classe = i;
+                }else if(max == aux->data.peso[i]){
+                    max = aux->data.peso[i];
+                    classe = i;
+                }
+            }
+            printf(" Classe: %d", classe);
+            printf("\n");
+        }
+        aux = aux->prox;
+    }
+}
+
+ ```
+ 
 	
 	
 
