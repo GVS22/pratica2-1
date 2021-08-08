@@ -83,7 +83,7 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 
 - b) Para a resolução do item b foi reutilizada a estrutura de lista estática do item anterior, porém foram feitas alterações para atender as questões levantadas no item.
 	Foi criada uma ListaB para tal, e um metódo que preenche com números aleatórios entre 1 e 13 as 3 posições da lista.
-	`
+	```
 void ListB(Listab *l1, Listab *l2){
 	int aux1 = 0;
 
@@ -107,7 +107,7 @@ void ListB(Listab *l1, Listab *l2){
 		}
 	}	
 }
-	`
+	```
 	
 - c) 
 
