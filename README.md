@@ -416,6 +416,7 @@ encontrada como resultado.
 
 - a)Para a resolução do problema proposto no item a foi implementada uma estrutura de fila dinâmica, sendo a mesma contendo dois tipos de fila, uma fila para receber os binômios e outra fila para os resultados das expansões dos binômios referentes.
  	Foram implementadas três funções principais para solucionar o problema proposto, são elas: fatorial, combinação e Binomio de Newton.
+	A Fila receebe os binomios, após isso é chamada a função que calcula o deseenvolvimento  do binômio de newton e o resultado do desenvolvimento é armazenado em uma fila de resultados.
 ```
 int fat(int n){
     int fatorial = 0;
@@ -458,6 +459,10 @@ void Binomio(int n, char x, char y, FilaDR *res){
 }
 
 ```
+#### Exemplo de execução: ####
+
+![binomio](https://user-images.githubusercontent.com/60747654/128638471-ec27141d-5b9c-4660-83e0-8e9df2f2498d.PNG)
+
 	
 - b)  
 
