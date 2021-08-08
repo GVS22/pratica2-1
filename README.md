@@ -428,34 +428,33 @@ encontrada como resultado.
 	
 	```
 	int combinacao(int n, int p){   
-    		int c;
-    		int aux;
-    		aux = n - p;
-    		c = fat(n);
-    		c = c/(fat(p)*fat(aux));
-    		return c;
+    	int c;
+    	int aux;
+    	aux = n - p;
+    	c = fat(n);
+    	c = c/(fat(p)*fat(aux));
+    	return c;
 	}
 	```
 	
-	```
-	void Binomio(int n, char x, char y, FilaDR *res){
+	```void Binomio(int n, char x, char y, FilaDR *res){
 
-    		for(int j = 0; j <= n; j++){
-        		if(j < n){
-           		 char *str = malloc(sizeof(str));
-           		 sprintf(str, "%d(%c^%d * %c^%d) + ", combinacao(n, j), x,n-j, y, j);
-           		 ItemR r;
-           		 r.result = str;
-           		 EnfileiraRes(res, r);
-       		 }else if(j == n){
-		    	char *str = malloc(sizeof(str));
-         		   sprintf(str, "%d(%c^%d * %c^%d)\n", combinacao(n, j), x,n-j, y, j);
-           		 ItemR r;
-           		 r.result = str;
-           		 EnfileiraRes(res, r);    
-        		}
-    		}
-	}
+    for(int j = 0; j <= n; j++){
+        if(j < n){
+            char *str = malloc(sizeof(str));
+            sprintf(str, "%d(%c^%d * %c^%d) + ", combinacao(n, j), x,n-j, y, j);
+            ItemR r;
+            r.result = str;
+            EnfileiraRes(res, r);
+        }else if(j == n){
+            char *str = malloc(sizeof(str));
+            sprintf(str, "%d(%c^%d * %c^%d)\n", combinacao(n, j), x,n-j, y, j);
+            ItemR r;
+            r.result = str;
+            EnfileiraRes(res, r);    
+        }
+    }
+}
 	```
 	
 - b)  
