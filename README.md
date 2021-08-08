@@ -262,7 +262,7 @@ de sua execução.
 
 ### Resolução ###
 
-- a) Para a resolução do item a foi utilizada uma estrutura de pilha estática com tamanho máximo de 10 items.
+- a) Para a resolução do item a foi utilizada uma estrutura de pilha estática com tamanho máximo de 10 items, a estrutura foi escolhida pela facilidade de trabalhar com um unico valor no tipo Item, no caso um dado do tipo char.
 	Por fim foi implementado um método que recebe um vetor de caracteres e verifica se a parentisação está balanceada:
 	```
 	void Verify(char *str, Pilha *p1){
@@ -288,6 +288,8 @@ de sua execução.
 	}
 
 	```
+	#### Exemplo de execução: ####
+	
 - b 
 - c 
 
