@@ -263,7 +263,7 @@ de sua execução.
 ### Resolução ###
 
 - a) Para a resolução do item a foi utilizada uma estrutura de pilha estática com tamanho máximo de 10 items, a estrutura foi escolhida pela facilidade de trabalhar com um unico valor no tipo Item, no caso um dado do tipo char.
-	Por fim foi implementado um método que recebe um vetor de caracteres e verifica se a parentisação está balanceada:
+	Por fim foi implementado um método que recebe um vetor de caracteres e verifica se a parentização está balanceada:
 	```
 	void Verify(char *str, Pilha *p1){
 
@@ -295,7 +295,7 @@ de sua execução.
 	```
 	![pilha1](https://user-images.githubusercontent.com/60747654/128637116-b8ec60ed-d627-4ba1-9c01-1a950f2d929c.PNG)
 
-- b 
+- b Para a resolução do item b foi implementada uma estrutura de pilha dinâmica
 - c 
 
 ## Problema 3 - Filas ##
