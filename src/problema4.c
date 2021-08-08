@@ -13,12 +13,37 @@ void ClientInsert(Listacl *l, Itemcl d){
 	l->last->prox = NULL;
 }
 
+void CLRemove(Listacl *l, Itemcl d){
+	Blockcl *aux, *tmp;
+
+	if(l->first == l->last || l == NULL || l->first->prox == NULL){
+		printf("LISTA VAZIA!\n");
+		return;
+	}
+	
+	aux = l->first;
+	while(aux->prox != NULL){
+		if (aux->prox->data.client != d.client)
+			aux = aux->prox;
+		else{
+			tmp = aux;
+			aux = aux->prox;
+			tmp->prox = aux->prox;
+			free(aux);
+			aux = NULL;
+		}
+	}
+}
+
 void ClientPrint(Listacl *l){
     Blockcl *aux;
 
 	aux = l->first->prox;
 	while(aux != NULL){
 		printf("Cliente: %s\n", aux->data.client);
+        for (int i = 0; i < 4; i++){
+            printf("%d\t", aux->data.carrinho[i]);
+        }
 		aux = aux->prox;
 	}
 }
@@ -101,5 +126,49 @@ void FFImprime(Filaff *f){
 }
 
 void problema4(){
-    
+    Pilhapp p;
+    Filaff f;
+    Listacl l;
+
+    EmptyClient(&l);
+    EmptyProd(&p);
+    FilaFVazia(&f);
+
+    Itemcl *client = malloc(sizeof(Itemcl));
+    Itemff *fla = malloc(sizeof(Itemff));
+    Itempp *prod = malloc(sizeof(Itempp));
+
+
+    prod->produto = "Arroz";
+    prod->val = 6.99;
+    prod->id = 1;
+    PushProd(&p , *prod);
+    prod->produto = "Feijao";
+    prod->val = 5.84;
+    prod->id = 2;
+    PushProd(&p , *prod);
+    prod->produto = "Carne";
+    prod->val = 22.56;
+    prod->id = 3;
+    PushProd(&p , *prod);
+
+    client->client = "Jorge";
+    prod->id = 2;
+    PopProd(&p, prod);
+    client->carrinho[0] = prod->id; 
+    prod->id = 3;
+    PopProd(&p, prod);
+    client->carrinho[1] = prod->id; 
+
+    ClientInsert(&l, *client);
+    client->client = "Simoni";
+    ClientInsert(&l, *client);
+    client->client = "Julia";
+    ClientInsert(&l, *client);
+
+    fla->cliente = "Jorge";
+    EnfileiraF(&f, *fla);
+    client->client = "Jorge";
+    CLRemove(&l, *client);
+
 }

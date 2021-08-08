@@ -27,6 +27,7 @@ int main(){
             FilaMain();
             op = 0;
         }else if(op == 4){
+            problema4();
             op = 0;
         }
     } while (op != 0);

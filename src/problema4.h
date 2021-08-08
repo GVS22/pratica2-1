@@ -21,6 +21,7 @@ typedef struct Filaff Filaff;
 struct Itemcl{
 	char *client;
     int id;
+    int *carrinho;
 };
 
 struct Blockcl{
@@ -50,7 +51,7 @@ struct Pilhapp{
 };
 
 struct Itemff{
-	char cliente;
+	char *cliente;
 };
 
 struct Blockff{
@@ -66,6 +67,7 @@ struct Filaff{
 void EmptyClient(Listacl *l);
 void ClientInsert(Listacl *l, Itemcl d);
 void ClientPrint(Listacl *l);
+void CLRemove(Listacl *l, Itemcl d);
 
 void EmptyProd(Pilhapp *p);
 void PushProd(Pilhapp *p, Itempp d);
