@@ -526,3 +526,5 @@ permitido apenas a utilização das estruturas em sua composição dinâmica. No
 é manipular adequadamente as estruturas, então, busque por problemas simples já que a
 finalidade está na adequação das estruturas ao problema e não na resolução do mesmo de
 forma adequada ou efetiva.
+
+### Situação Proposta: ###
