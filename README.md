@@ -181,6 +181,53 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 			float valor;
 		};	
 	``` 
+	Por fim foi implementado um método que busca um item e seu respectivo mercado e verifica qual mercado possui o menor preço para o mesmo:
+	```
+	Block3 *aux;
+	Block3 *aux2;
+	aux2 = l3->first->prox;
+	aux = l3->first->prox;
+	while(aux != NULL){
+		if(aux->data.pxm[0] == 9){
+			Item1 d1;
+			d1.id = 9;
+			if(aux->data.valor > aux2->data.valor){
+				List1Search(l1, &d1);
+				printf("Preço: %.2f\n", aux2->data.valor);
+				//printf("%d\n", aux2->data.pxm[1]);
+				Item2 d2;
+				d2.idm = aux2->data.pxm[1];
+				List2Search(l2, &d2);
+			}else{
+				List1Search(l1, &d1);
+				printf("Preço: %.2f\n", aux->data.valor);
+				//printf("%d\n", aux->data.pxm[1]);
+				Item2 d2;
+				d2.idm = aux2->data.pxm[1];
+				List2Search(l2, &d2);
+			}
+		}else if(aux->data.pxm[0] == 8){
+			Item1 d1;
+			d1.id = 8;
+			if(aux->data.valor > aux2->data.valor){
+				List1Search(l1, &d1);
+				printf("Preço: %.2f\n", aux2->data.valor);
+				//printf("%d\n", aux2->data.pxm[1]);
+				Item2 d2;
+				d2.idm = aux2->data.pxm[1];
+				List2Search(l2, &d2);
+			}else{
+				List1Search(l1, &d1);
+				printf("Preço: %.2f\n", aux->data.valor);
+				//printf("%d\n", aux->data.pxm[1]);
+				Item2 d2;
+				d2.idm = aux2->data.pxm[1];
+				List2Search(l2, &d2);
+			}
+		}
+		aux = aux->prox;
+	}
+	```
 
 ## Problema 2 - Pilhas ##
 ### Enunciado ###
