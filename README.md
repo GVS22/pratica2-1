@@ -340,7 +340,17 @@ de sua execução.
 	![exeec](https://user-images.githubusercontent.com/60747654/128637475-82476bd1-9810-49bc-9cc6-d18b101d3851.PNG)
 
 	
-- c) Para a resolução do problema proposto no item c foi implementada uma pilha dinâmica, aproveitando a estrutura utilizada no problema anterior.
+- c) Para a resolução do problema proposto no item c foi implementada uma pilha dinâmica, aproveitando a estrutura utilizada no problema anterior. Sendo assim ela foi preenchida com 20 items, cada item com um valor randomico entre 1 e 99:
+ 	```
+		PilhaD p;
+		PilhaDVazia(&p);
+		srand((unsigned)time(NULL));
+		for (int i = 0; i < 20; i++){
+			Itempd d;
+			d.val = (rand()%99)+1;
+			DPush(&p, d);
+		}
+	```
 
 ## Problema 3 - Filas ##
 ### Enunciado ###
