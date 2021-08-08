@@ -262,7 +262,32 @@ de sua execução.
 
 ### Resolução ###
 
-- a 
+- a) Para a resolução do item a foi utilizada uma estrutura de pilha estática com tamanho máximo de 10 items.
+	Por fim foi implementado um método que recebe um vetor de caracteres e verifica se a parentisação está balanceada:
+	```
+	void Verify(char *str, Pilha *p1){
+
+		for(int i = 0; str[i] != '\0'; i++){
+			Itemp d;
+			d.val = str[i];
+			if(str[i] == '('){
+				PUSH(p1, d);
+			}else if(str[i] == ')'){
+				POP(p1, &d);
+			}
+		}
+		for(int i=p1->top-1; i>=p1->base; i--){
+			if(p1->base == p1->top){
+				printf("Parenteses balanceados!\n");
+			}else if(p1->vet[i].val == '('){
+				printf("Parenteses Desbalanceados!\n");
+				printf("Parenteses que nao se fecham:\n");
+				PilhaImprime(p1);
+			}
+		}	
+	}
+
+	```
 - b 
 - c 
 
