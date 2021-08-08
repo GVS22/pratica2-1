@@ -11,12 +11,12 @@ disso, considere dois conjuntos aleatórios de dados, um apenas com números imp
 com pares. Veja um exemplo: I = {1, 33, 25, 87, . . . , 13} e P = {62, 42, 36, 48, . . . , 14}. Realize
 as solicitações de implementação a seguir considerando para isso estruturar sua solução da
 seguinte forma: i) Uma implementação por letra e; ii) Uma implementação magma que conecte
-todas as letras por um único menu para execução. \
+todas as letras por um único menu para execução. 
 
 a: Crie duas listas (i.e., L1 e L2) com 100 elementos cada conforme regra par/impar acima
 apresentada. Feito isso, elabore uma função de concatenação que faça a união de L1
 e L2 mantendo as posições de paridade em ordem crescente, ou seja, {{L1[0], L2[0]},
-{L1[1], L2[1]}, . . . , {L1[99], L2[99]}}. \
+{L1[1], L2[1]}, . . . , {L1[99], L2[99]}}. 
 
 b: Crie um pequeno jogo utilizando duas listas (i.e., L1 e L2). Nesse, cada lista deve
 ter tamanho máximo de 3 entradas e cada posição deve armazenar um número inteiro
@@ -24,7 +24,7 @@ aleatório entre 1 e 13. Nesse jogo, após preencher ambas as listas, selecione 
 de forma aleatória mais um valor entre 1 e 13 e mostre-o na tela. A regra do jogo é a
 seguinte: Ambas as listas devem ser apresentadas na tela de forma sequencial a partir de suas posições de paridade, ou seja, {{L1[0], L2[0]}, {L1[1], L2[1]}, {L1[2], L2[2]}}.
 Cada par deve ser subtraído do valor apresentado e ganha o jogo a lista que apresentar
-a maior soma final. Mostre o ganhador ao final. \
+a maior soma final. Mostre o ganhador ao final. 
 
 c: Crie um pequeno sistema com três listas dinâmicas L1, L2 e L3. A primeira lista deve
 armazenar o nome de um produto de mercado comum como pão, arroz, feijão, etc .. bem
