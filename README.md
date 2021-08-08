@@ -40,6 +40,7 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 ### Resolução ###
 
 ## Problema 2 - Pilhas ##
+### Enunciado ###
 
 É de conhecimento que a estrutura do tipo pilha define regras de manipulação que não podem
 ser modificadas e que essas são comumente citadas como ações de PUSH (empilhar) e POP
@@ -62,6 +63,30 @@ Euler para encontrar para esse número os co-primos. Mostre-os na tela como resu
 de sua execução.
 
 ## Problema 3 - Filas ##
+### Enunciado ###
+
+Uma estrutura baseada em fila tem por definição a regra de sempre remover do início e inserir
+novos elementos no final. Sabendo-se disso, vamos praticar a utilização desse conceito nos
+seguintes problemas:
+
+- a: Em matemática discreta é muito comum nos depararmos com o conceito de binômio de
+Newton. O binômio de Newton fornece os coeficientes da expansão de potência para uma
+expressão binomial. Sua missão é criar uma função que receba uma Fila cujas posições
+representem expressões binomiais do tipo (x+y)
+k e retorne para o usuário uma segunda
+fila Fresult com a expansão de cada expressão apresentada. Mostre na tela os resultados,
+um por linha.
+
+- b: Atualmente, uma das formas de classificar uma entrada qualquer é observar seus atributos em relação a um conjunto de informações já conhecida. Nesse cenário, vamos considerar que esse conjunto de atributos é do tipo inteiro e com variação de 1 a 99, o que
+é verdade também para o conjunto de informações conhecida. A estrutura que guarda
+as informações conhecidas é definida pelo seguinte modelo: Cada posição da fila há um
+atributo e seu peso por classe. Considere que há 5 classes, logo, teremos um vetor de
+5 posições como parte de cada posição da fila. Sabendo-se disso, elabore um procedimento/função que dado uma fila de atributos não classificados seja possível buscar essa
+classificação entre as informações disponíveis. Mostre para usuário qual a classe que o dado conjunto faz parte. Para isso, considere que a classe de maior valor corresponde
+à classe da fila dada. Nesse sentido, some o valor de classe de cada atributo da fila de
+entrada e encontre a classe que no final apresente o maior valor. Mostre essa classe
+encontrada como resultado.
+
 
 ## Compilar ##
 ```
