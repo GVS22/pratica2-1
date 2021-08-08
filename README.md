@@ -82,7 +82,7 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 	
 	![conc](https://user-images.githubusercontent.com/60747654/128634490-9dd9bf14-cc06-4751-bd55-998e32331174.PNG)
 
-- b) Para a resolução do item b foi reutilizada a estrutura de lista estática do item anterior, porém foram feitas alterações para atender as questões levantadas no item.
+- b) Para a resolução do item b foi reutilizada a estrutura de lista estática do item anterior pelo mesmo motivo: já se sabe o tamanho da estrutura, nesse caso 3 posições, porém foram feitas alterações para atender as questões levantadas no item.
 	Foi criada uma ListaB para tal, e um metódo que preenche com números aleatórios entre 1 e 13 as 3 posições da lista.
 	```
 	void ListB(Listab *l1, Listab *l2){
@@ -108,6 +108,14 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 			}
 		}	
 	}
+	```
+	Criadas as listas, é feito um procedimento para gerar o número randomico a ser subtraído:
+	```
+		srand((unsigned)time(NULL));
+		int random = (rand()%12)+1;
+		printf("\n");
+		printf("NUMERO RANDOMICO: %d", random);
+		printf("\n\n");
 	```
 	
 - c) 
