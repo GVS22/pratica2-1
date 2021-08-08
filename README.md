@@ -229,6 +229,13 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 	}
 	```
 	#### Exemplo de execução: ####
+	
+	![menu1](https://user-images.githubusercontent.com/60747654/128635921-b03c61e0-e3c6-4a96-a142-b3cb4b6152ec.PNG)
+	
+	![menu2](https://user-images.githubusercontent.com/60747654/128635972-1d8635b0-b5fb-4432-88bf-c9a04d2e51a5.PNG)
+	
+	![exec](https://user-images.githubusercontent.com/60747654/128635977-b8e31133-32a7-4878-9e54-192c0eeaa07b.PNG)
+
 
 ## Problema 2 - Pilhas ##
 ### Enunciado ###
