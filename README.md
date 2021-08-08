@@ -163,7 +163,7 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 	![game](https://user-images.githubusercontent.com/60747654/128635303-2dcd02e7-6381-4e6c-b5aa-9c706f57df1c.PNG)
 
 	
-- c) 
+- c) Para a resolução do item c foi utilizada uma estrutura de lista dinâmica, para tal, foram implementadas 3 listas dinâmicas L1, L2 e L3.
 
 ## Problema 2 - Pilhas ##
 ### Enunciado ###
