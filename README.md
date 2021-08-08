@@ -351,6 +351,43 @@ de sua execução.
 			DPush(&p, d);
 		}
 	```
+	Por fim foi criada uma função que calcula o Totiente de Euler:
+	```
+	void Totient(PilhaD *p){
+		const int N = 1e5+2;
+		int tot[N];
+
+		for(int i = 0; i < N; i++){
+			tot[i] = i;
+		} 
+
+		for(int i = 2; i < N; i++){
+			if(tot[i] == i){
+				for (int j = 2*i; j < N; j+=i){
+					tot[j] *= i-1;
+					tot[j] /= i;
+				}
+				tot[i] = i-1;
+			}
+		}
+		Blockpd *aux;
+		aux = p->top;
+		printf("Totiente: \n");
+		while(aux != p->base){
+			DPop(p, &aux->data);
+			printf("%d\n", tot[aux->data.val]);
+			aux = aux->prox;
+		}
+	
+	}
+	```
+	#### Exemplo de execução: ####
+	![menu3](https://user-images.githubusercontent.com/60747654/128637848-801aff33-5feb-42e6-b634-7800f1bafd31.PNG)
+	
+	![pilha2](https://user-images.githubusercontent.com/60747654/128637851-57d84dde-d4dd-4523-95e5-6b7e53c10b19.PNG)
+	
+	![pilha1](https://user-images.githubusercontent.com/60747654/128637849-a10ac6d1-03e2-455b-8be8-f5922dd6df97.PNG)
+
 
 ## Problema 3 - Filas ##
 ### Enunciado ###
