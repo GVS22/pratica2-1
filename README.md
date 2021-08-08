@@ -299,14 +299,43 @@ de sua execução.
 	onde são alocados 10 números aleatórios de 1 a 20:
 	```
 	srand((unsigned)time(NULL));
-			for(int i = 1; i < 11; i++){
-				Itempd d;
-				d.val = (rand()%20)+1;;
-				DPush(&P1, d);
-			}
+		for(int i = 1; i < 11; i++){
+			Itempd d;
+			d.val = (rand()%20)+1;;
+			DPush(&P1, d);
+		}
+	```
+	Por fim foi implementada uma função que apresenta a solução do problema proposto no item, ou seja, com apenas uma variável auxiliar Blockpd * aux os items da pilha P! são movidos para a pilha P2:
+	```
+	void Transfer(PilhaD *P1, PilhaD *P2){
+		Blockpd *aux;
+		aux = P1->top;
+
+		DPush(P2, aux->prox->prox->prox->prox->prox->prox->prox->prox->prox->data);
+		DPop(P1, &aux->data);
+		DPush(P2, aux->prox->prox->prox->prox->prox->prox->prox->prox->data);
+		DPop(P1, &aux->prox->data);
+		DPush(P2, aux->prox->prox->prox->prox->prox->prox->prox->data);
+		DPop(P1, &aux->prox->prox->data);
+		DPush(P2, aux->prox->prox->prox->prox->prox->prox->data);
+		DPop(P1, &aux->prox->prox->prox->data);
+		DPush(P2, aux->prox->prox->prox->prox->prox->data);
+		DPop(P1, &aux->prox->prox->prox->prox->data);
+		DPush(P2, aux->prox->prox->prox->prox->data);
+		DPop(P1, &aux->prox->prox->prox->prox->prox->data);
+		DPush(P2, aux->prox->prox->prox->data);
+		DPop(P1, &aux->prox->prox->prox->prox->prox->prox->data);
+		DPush(P2, aux->prox->prox->data);
+		DPop(P1, &aux->prox->prox->prox->prox->prox->prox->prox->data);
+		DPush(P2, aux->prox->data);
+		DPop(P1, &aux->prox->prox->prox->prox->prox->prox->prox->prox->data);
+		DPush(P2, aux->data);
+		DPop(P1, &aux->prox->prox->prox->prox->prox->prox->prox->prox->prox->data);
+	
+	}
 	```
 	
-- c 
+- c) 
 
 ## Problema 3 - Filas ##
 ### Enunciado ###
