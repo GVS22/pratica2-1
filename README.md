@@ -59,7 +59,7 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
     ```
     Por fim, foi criada uma função que concatena os valores da lista par com os valores da lista impar, mantendo as respectivas posições juntas:
     ```	
-    	char str[10];
+    char str[10];
 	int result;
     	for(int i = par->first; i < par->last; i++){
 		Item c;
