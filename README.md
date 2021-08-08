@@ -514,3 +514,15 @@ for(int i = 0; i < 10; i++){
  ![fila](https://user-images.githubusercontent.com/60747654/128638932-b179c3ed-68f4-4ac3-b105-701e225a4135.PNG)
  
  ![class](https://user-images.githubusercontent.com/60747654/128638934-e60f4421-0f9f-4580-b6b1-1efeff9c17cd.PNG)
+ 
+## Problema 4 ##
+### Enunciado ###
+Como é de conhecimento de todos, as estruturas do tipo lista, pilha e filha formam a base da
+estrutura de dados e são amplamente utilizadas como parte de muitos problemas atuais. Sua
+função e escolher um problema que utilize as três estruturas, buscando com isso desenvolver
+sua solução a partir da implementação de uma aplicação. Relate o que seu problema resolve
+e qual a finalidade dele em relação ao problema encontrado/proposto. Para essa missão é
+permitido apenas a utilização das estruturas em sua composição dinâmica. Note que o objetivo
+é manipular adequadamente as estruturas, então, busque por problemas simples já que a
+finalidade está na adequação das estruturas ao problema e não na resolução do mesmo de
+forma adequada ou efetiva.
