@@ -167,17 +167,17 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 	```
 		struct Item1{
 			char *prd;
-    			int qtd;
-    			int id;
+    		int qtd;
+    		int id;
 		};
 
 		struct Item2{
 			char *mercado;
-    			int idm;
+    		int idm;
 		};
 
 		struct Item3{
-    			int pxm[2];
+    		int pxm[2];
 			float valor;
 		};	
 	``` 
