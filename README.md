@@ -46,16 +46,17 @@ ser modificadas e que essas são comumente citadas como ações de PUSH (empilha
 (desempilhar). Sabendo-se disso e mediante as regras de desenvolvimento já apresentadas
 faça:
 
--a: Escreva um programa que utilize uma pilha para verificar se expressões aritméticas estão
+- a: Escreva um programa que utilize uma pilha para verificar se expressões aritméticas estão
 com a parentização correta. O programa deve verificar as expressões para ver se cada
-“abre parênteses” tem um “fecha parênteses”. Veja exemplo: Correto -> ( ( ) ) – ( ( )( ) ) –
-( ) ( ), Errado -> ( ( ) – ( ( )( ) ) – ( ) ( ).
+“abre parênteses” tem um “fecha parênteses”. Veja exemplo: 
+Correto -> ( ( ) ) – ( ( )( ) ) – ( ) ( ) 
+Errado -> ( ( ) – ( ( )( ) ) – ( ) ( ).
 
--b: Elabore um programa utilizando duas pilhas dinâmicas P1 e P2. O objetivo desse programa é transferir os dados da pilha P1 para P2 mantendo-se a ordem de P1 em P2. Para
+- b: Elabore um programa utilizando duas pilhas dinâmicas P1 e P2. O objetivo desse programa é transferir os dados da pilha P1 para P2 mantendo-se a ordem de P1 em P2. Para
 tanto, não é permitido a utilização de nenhuma estrutura ou variável auxiliar, apenas um
 único ponteiro auxiliar do mesmo tipo utilizado para marcar topo e fundo.
 
--c: Elabore uma função que receba uma pilha P1 com 20 posições preenchidas por números
+- c: Elabore uma função que receba uma pilha P1 com 20 posições preenchidas por números
 inteiros aleatórios entre 1 e 99. Para cada número da pilha, utilize a função totiente de
 Euler para encontrar para esse número os co-primos. Mostre-os na tela como resultado
 de sua execução.
