@@ -37,6 +37,8 @@ vs mercado) e o respectivo preço. Sua função nessa aplicação é relacionar 
 mercado vs preço e mostrar ao final o menor custo total para uma compra. Para tanto,
 detalhe em tela produto, menor preço e mercado a ser comprado.
 
+### Resolução ###
+
 ## Problema 2 - Pilhas ##
 
 ## Problema 3 - Filas ##
