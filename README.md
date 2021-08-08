@@ -3,6 +3,7 @@ Trabalho realizado para a disciplina de Algoritmo e Estrutura de Dados \
 CEFET - MG Campus V \
 Jorge Vitor G. de Souza
 ## Problema 1 - Listas ##
+### Enunciado ###
 
 Conforme literatura, o tipo lista é uma estrutura de dado extremamente flexível cuja definição
 permite o armazenamento de informação sem muitas regras de manipulação. Sabendo-se
