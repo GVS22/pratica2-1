@@ -86,27 +86,27 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 	Foi criada uma ListaB para tal, e um metódo que preenche com números aleatórios entre 1 e 13 as 3 posições da lista.
 	```
 	void ListB(Listab *l1, Listab *l2){
-	int aux1 = 0;
+		int aux1 = 0;
 
-	srand((unsigned)time(NULL));
-	while(aux1 != MAXTAMB){
-		Item d;
-		d.val = rand()%13;
-		if(d.val != 0){
-			ListBInsert(l1, d);
-			aux1++;
+		srand((unsigned)time(NULL));
+		while(aux1 != MAXTAMB){
+			Item d;
+			d.val = rand()%13;
+			if(d.val != 0){
+				ListBInsert(l1, d);
+				aux1++;
+			}
 		}
-	}
 
-	int aux2 = 0;
-	while(aux2 != MAXTAMB){
-		Item d;
-		d.val = rand()%13;
-		if(d.val != 0){
-			ListBInsert(l2, d);
-			aux2++;
-		}
-	}	
+		int aux2 = 0;
+		while(aux2 != MAXTAMB){
+			Item d;
+			d.val = rand()%13;
+			if(d.val != 0){
+				ListBInsert(l2, d);
+				aux2++;
+			}
+		}	
 	}
 	```
 	
