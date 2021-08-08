@@ -81,7 +81,34 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 	
 	![conc](https://user-images.githubusercontent.com/60747654/128634490-9dd9bf14-cc06-4751-bd55-998e32331174.PNG)
 
-- b) 
+- b) Para a resolução do item b foi reutilizada a estrutura de lista estática do item anterior, porém foram feitas alterações para atender as questões levantadas no item.
+	Foi criada uma ListaB para tal, e um metódo que preenche com números aleatórios entre 1 e 13 as 3 posições da lista.
+	`
+void ListB(Listab *l1, Listab *l2){
+	int aux1 = 0;
+
+	srand((unsigned)time(NULL));
+	while(aux1 != MAXTAMB){
+		Item d;
+		d.val = rand()%13;
+		if(d.val != 0){
+			ListBInsert(l1, d);
+			aux1++;
+		}
+	}
+
+	int aux2 = 0;
+	while(aux2 != MAXTAMB){
+		Item d;
+		d.val = rand()%13;
+		if(d.val != 0){
+			ListBInsert(l2, d);
+			aux2++;
+		}
+	}	
+}
+	`
+	
 - c) 
 
 ## Problema 2 - Pilhas ##
