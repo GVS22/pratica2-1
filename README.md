@@ -528,3 +528,9 @@ finalidade está na adequação das estruturas ao problema e não na resolução
 forma adequada ou efetiva.
 
 ### Situação Proposta: ###
+
+Com a proposta de utilizar as 3 estruturas em um mesmo problema, uma situação adequada e simples para tal seria uma compra em um mercado.
+Por exemplo, em um mercado existem vários clientes, neste caso sendo representados por uma estrutura de Lista, cada cliente em uma compras
+seleciona um produto e o coloca no carrinho, nesta situação os produtos sendo representados por uma estrutura de pilha, onde para pegar um produto 
+no fundo da pilha, é necessário remover os produtos existentes por cima, por fim com o carrinho de compras cheio o cliente entra em uma fila para o caixa, assim 
+utilizando a definição da estrutura de fila onde o primeiro a entrar é o primeiro a sair.
