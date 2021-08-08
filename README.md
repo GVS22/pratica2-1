@@ -70,7 +70,8 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 	}
     ```
     Exemplos de execução:
-    	![menu1](https://user-images.githubusercontent.com/60747654/128634479-7dece094-b740-4c6a-ab17-10adeacbf297.PNG)
+    
+    ![menu1](https://user-images.githubusercontent.com/60747654/128634479-7dece094-b740-4c6a-ab17-10adeacbf297.PNG)
     
 	![meenu2](https://user-images.githubusercontent.com/60747654/128634481-4d161bc4-60eb-40c0-ad76-2a637022bda9.PNG)
 	
