@@ -10,7 +10,7 @@
 int fat(int n);
 int combinacao(int n, int p);
 void Binomio(int n, char x, char y, FilaDR *res);
-void FindClasse(FilaDb *f);
+void FindClasse(FilaDb *f, Itemfb *d);
 void FilaMain();
 
 #endif

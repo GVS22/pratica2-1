@@ -36,19 +36,25 @@ void Binomio(int n, char x, char y, FilaDR *res){
     }
 }
 
-void FindClasse(FilaDb *f){
+void FindClasse(FilaDb *f, Itemfb *d){
     Blockfb *aux;
-    int max;
+
 	aux = f->first->prox;
 	while(aux != NULL){
-        max = aux->data.peso[0];
-        for (int i = 1; i < 5; i++){
-            //printf("%d\n", aux->data.peso[i]); 
-            if(aux->data.peso[i] >= max){
-                printf("%d\n", i);
-            }else{
-                printf("%d\n", 0);
+        if(&aux->data == d){
+            int max = aux->data.peso[0];
+            int classe = 0;
+            for (int i = 1; i < 5; i++){
+                if(max < aux->data.peso[i]){
+                    max = aux->data.peso[i];
+                    classe = i;
+                }else if(max == aux->data.peso[i]){
+                    max = aux->data.peso[i];
+                    classe = i;
+                }
             }
+            printf(" Classe: %d", classe);
+            printf("\n");
         }
         aux = aux->prox;
     }
@@ -102,7 +108,16 @@ void FilaMain(){
         }
         FilaBImprime(&f);
         printf("\n");
-        FindClasse(&f);	
+
+        Blockfb *aux;
+        aux = f.first->prox;
+
+        while(aux != NULL){
+            printf("Valor: ");
+            printf("%d", aux->data.val);
+            FindClasse(&f, &aux->data);	
+            aux = aux->prox;
+        }        
     }else if(op == 0){
         op = 0;
     }else{
