@@ -69,7 +69,7 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 		ListInsert(conc, c);
 	}
     ```
-    Exemplos de execução:
+    #### Exemplos de execução: ####
     
     ![menu1](https://user-images.githubusercontent.com/60747654/128634479-7dece094-b740-4c6a-ab17-10adeacbf297.PNG)
     
