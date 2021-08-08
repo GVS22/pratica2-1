@@ -334,6 +334,11 @@ de sua execução.
 	
 	}
 	```
+	#### Exemplo de execução: ####
+	![menupilha](https://user-images.githubusercontent.com/60747654/128637474-f999d554-d7c2-4ff1-a979-a5c696774cfb.PNG)
+	
+	![exeec](https://user-images.githubusercontent.com/60747654/128637475-82476bd1-9810-49bc-9cc6-d18b101d3851.PNG)
+
 	
 - c) 
 
