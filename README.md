@@ -163,7 +163,24 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 	![game](https://user-images.githubusercontent.com/60747654/128635303-2dcd02e7-6381-4e6c-b5aa-9c706f57df1c.PNG)
 
 	
-- c) Para a resolução do item c foi utilizada uma estrutura de lista dinâmica, para tal, foram implementadas 3 listas dinâmicas L1, L2 e L3.
+- c) Para a resolução do item c foi utilizada uma estrutura de lista dinâmica, para tal, foram implementadas 3 listas dinâmicas L1, L2 e L3. Pois cada lista tem seu respectivo item.
+	```
+	struct Item1{
+		char *prd;
+    		int qtd;
+    		int id;
+	};
+
+	struct Item2{
+		char *mercado;
+    		int idm;
+	};
+
+	struct Item3{
+    		int pxm[2];
+		float valor;
+	};	
+	``` 
 
 ## Problema 2 - Pilhas ##
 ### Enunciado ###
