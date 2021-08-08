@@ -44,8 +44,7 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 
 ### Resolução ###
 
-- a 
-    Para a resolução do item a, foi implementada uma estrutura de lista estática devido a informação prévia do número de elementos.
+- a)Para a resolução do item a, foi implementada uma estrutura de lista estática devido a informação prévia do número de elementos.
     Para o prenchimento da lista foi utilizado um metodo para gerar números randômicos entre 1 e 99. Por exemplo para gerar a lista de números pares:
     ```
     srand((unsigned)time(NULL));
@@ -58,8 +57,8 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 		  }
 	  }
     ```
-- b 
-- c 
+- b) 
+- c) 
 
 ## Problema 2 - Pilhas ##
 ### Enunciado ###
