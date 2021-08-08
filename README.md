@@ -536,3 +536,56 @@ no fundo da pilha, é necessário remover os produtos existentes por cima, por f
 utilizando a definição da estrutura de fila onde o primeiro a entrar é o primeiro a sair.
 
 ## Resolução ##
+
+Empilhando os produtos:
+```
+prod->produto = "Arroz";
+prod->val = 6.99;
+prod->id = 1;
+PushProd(&p , *prod);
+prod->produto = "Feijao";
+prod->val = 5.84;
+prod->id = 2;
+PushProd(&p , *prod);
+prod->produto = "Carne";
+prod->val = 22.56;
+prod->id = 3;
+PushProd(&p , *prod);
+```
+Listando os Clientes:
+
+```
+ client->client = "Jorge";
+ ClientInsert(&l, *client);
+ client->client = "Simoni";
+ ClientInsert(&l, *client);
+ client->client = "Julia";
+ ClientInsert(&l, *client);
+ 
+```
+
+Preenchendo o carrinho do Cliente:
+
+```
+client->client = "Jorge";
+prod->id = 2;
+PopProd(&p, prod);
+client->carrinho[0] = prod->id; 
+prod->id = 3;
+PopProd(&p, prod);
+client->carrinho[1] = prod->id; 
+
+```
+Colocando o cliente na fila e retirando o mesmo da lista:
+
+```
+fla->cliente = "Jorge";
+EnfileiraF(&f, *fla);
+client->client = "Jorge";
+CLRemove(&l, *client);
+
+```
+
+
+
+
