@@ -414,6 +414,49 @@ entrada e encontre a classe que no final apresente o maior valor. Mostre essa cl
 encontrada como resultado.
 ### Resolução ###
 
-- a 
-- b  
+- a)Para a resolução do problema proposto no item a foi implementada uma estrutura de fila dinâmica, sendo a mesma contendo dois tipos de fila, uma fila para receber os binômios e outra fila para os resultados das expansões dos binômios referentes.
+ 	Foram implementadas três funções principais para solucionar o problema proposto, são elas: fatorial, combinação e Binomio de Newton.
+	```
+	int fat(int n){
+    		int fatorial = 0;
+    		for(fatorial = 1; n > 1; n = n - 1){
+        	fatorial = fatorial * n;
+    		}
+   	 return fatorial;
+	}
+	```
+	
+	```
+	int combinacao(int n, int p){   
+    		int c;
+    		int aux;
+    		aux = n - p;
+    		c = fat(n);
+    		c = c/(fat(p)*fat(aux));
+    		return c;
+	}
+	```
+	
+	```
+	void Binomio(int n, char x, char y, FilaDR *res){
+
+    		for(int j = 0; j <= n; j++){
+        		if(j < n){
+           		 char *str = malloc(sizeof(str));
+           		 sprintf(str, "%d(%c^%d * %c^%d) + ", combinacao(n, j), x,n-j, y, j);
+           		 ItemR r;
+           		 r.result = str;
+           		 EnfileiraRes(res, r);
+       		 }else if(j == n){
+		    	char *str = malloc(sizeof(str));
+         		   sprintf(str, "%d(%c^%d * %c^%d)\n", combinacao(n, j), x,n-j, y, j);
+           		 ItemR r;
+           		 r.result = str;
+           		 EnfileiraRes(res, r);    
+        		}
+    		}
+	}
+	```
+	
+- b)  
 
