@@ -44,7 +44,7 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 
 ### Resolução ###
 
-- a 
+- a Para a resolução do item a, foi implementada uma estrutura de lista estática devido a informação prévia do número de elementos
 - b 
 - c 
 
