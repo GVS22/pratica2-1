@@ -384,11 +384,10 @@ de sua execução.
 	#### Exemplo de execução: ####
 	![menu3](https://user-images.githubusercontent.com/60747654/128637848-801aff33-5feb-42e6-b634-7800f1bafd31.PNG)
 	
+	![pilha1](https://user-images.githubusercontent.com/60747654/128637849-a10ac6d1-03e2-455b-8be8-f5922dd6df97.PNG)
+	
 	![pilha2](https://user-images.githubusercontent.com/60747654/128637851-57d84dde-d4dd-4523-95e5-6b7e53c10b19.PNG)
 	
-	![pilha1](https://user-images.githubusercontent.com/60747654/128637849-a10ac6d1-03e2-455b-8be8-f5922dd6df97.PNG)
-
-
 ## Problema 3 - Filas ##
 ### Enunciado ###
 
