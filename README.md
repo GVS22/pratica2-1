@@ -69,6 +69,13 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 		ListInsert(conc, c);
 	}
     ```
+    Exemplos de execução:
+    ![menu1](https://user-images.githubusercontent.com/60747654/128634479-7dece094-b740-4c6a-ab17-10adeacbf297.PNG)
+	![meenu2](https://user-images.githubusercontent.com/60747654/128634481-4d161bc4-60eb-40c0-ad76-2a637022bda9.PNG)
+		![par](https://user-images.githubusercontent.com/60747654/128634485-3be64866-a9f8-45c0-a995-157324c078a8.PNG)
+			![imp](https://user-images.githubusercontent.com/60747654/128634488-41aff163-0242-4ed9-aa42-9992cbacfd36.PNG)
+				![conc](https://user-images.githubusercontent.com/60747654/128634490-9dd9bf14-cc06-4751-bd55-998e32331174.PNG)
+
 - b) 
 - c) 
 
