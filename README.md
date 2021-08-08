@@ -44,6 +44,10 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 
 ### Resolução ###
 
+- a 
+- b 
+- c 
+
 ## Problema 2 - Pilhas ##
 ### Enunciado ###
 
@@ -68,6 +72,10 @@ Euler para encontrar para esse número os co-primos. Mostre-os na tela como resu
 de sua execução.
 
 ### Resolução ###
+
+- a 
+- b 
+- c 
 
 ## Problema 3 - Filas ##
 ### Enunciado ###
@@ -94,4 +102,7 @@ classificação entre as informações disponíveis. Mostre para usuário qual a
 entrada e encontre a classe que no final apresente o maior valor. Mostre essa classe
 encontrada como resultado.
 ### Resolução ###
+
+- a 
+- b  
 
