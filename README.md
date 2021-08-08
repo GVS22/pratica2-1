@@ -295,7 +295,17 @@ de sua execução.
 	```
 	![pilha1](https://user-images.githubusercontent.com/60747654/128637116-b8ec60ed-d627-4ba1-9c01-1a950f2d929c.PNG)
 
-- b Para a resolução do item b foi implementada uma estrutura de pilha dinâmica
+- b) Para a resolução do item b foi implementada uma estrutura de pilha dinâmica. Foram criadas duas pilhas P1 e P2, sendo que P1 foi preenchida por um método
+	onde são alocados 10 números aleatórios de 1 a 20:
+	```
+	srand((unsigned)time(NULL));
+			for(int i = 1; i < 11; i++){
+				Itempd d;
+				d.val = (rand()%20)+1;;
+				DPush(&P1, d);
+			}
+	```
+	
 - c 
 
 ## Problema 3 - Filas ##
