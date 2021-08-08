@@ -228,6 +228,7 @@ detalhe em tela produto, menor preço e mercado a ser comprado.
 		aux = aux->prox;
 	}
 	```
+	#### Exemplo de execução: ####
 
 ## Problema 2 - Pilhas ##
 ### Enunciado ###
