@@ -436,8 +436,8 @@ encontrada como resultado.
     	return c;
 	}
 	```
-	
-	```void Binomio(int n, char x, char y, FilaDR *res){
+```	
+void Binomio(int n, char x, char y, FilaDR *res){
 
     for(int j = 0; j <= n; j++){
         if(j < n){
@@ -455,7 +455,8 @@ encontrada como resultado.
         }
     }
 }
-	```
+
+```
 	
 - b)  
 
