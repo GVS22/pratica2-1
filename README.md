@@ -340,7 +340,7 @@ de sua execução.
 	![exeec](https://user-images.githubusercontent.com/60747654/128637475-82476bd1-9810-49bc-9cc6-d18b101d3851.PNG)
 
 	
-- c) 
+- c) Para a resolução do problema proposto no item c foi implementada uma pilha dinâmica, aproveitando a estrutura utilizada no problema anterior.
 
 ## Problema 3 - Filas ##
 ### Enunciado ###
