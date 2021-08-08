@@ -289,7 +289,12 @@ de sua execução.
 
 	```
 	#### Exemplo de execução: ####
-	
+	Entrada utilizada:
+	```
+	char str[] = "(())(())(";
+	```
+	![pilha1](https://user-images.githubusercontent.com/60747654/128637116-b8ec60ed-d627-4ba1-9c01-1a950f2d929c.PNG)
+
 - b 
 - c 
 
