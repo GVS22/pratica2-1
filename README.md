@@ -2,6 +2,11 @@
 Trabalho realizado para a disciplina de Algoritmo e Estrutura de Dados \
 CEFET - MG Campus V \
 Jorge Vitor G. de Souza
+## Compilar ##
+```
+  make
+  make run
+```
 ## Problema 1 - Listas ##
 ### Enunciado ###
 
@@ -62,6 +67,8 @@ inteiros aleatórios entre 1 e 99. Para cada número da pilha, utilize a funçã
 Euler para encontrar para esse número os co-primos. Mostre-os na tela como resultado
 de sua execução.
 
+### Resolução ###
+
 ## Problema 3 - Filas ##
 ### Enunciado ###
 
@@ -86,10 +93,5 @@ classificação entre as informações disponíveis. Mostre para usuário qual a
 à classe da fila dada. Nesse sentido, some o valor de classe de cada atributo da fila de
 entrada e encontre a classe que no final apresente o maior valor. Mostre essa classe
 encontrada como resultado.
+### Resolução ###
 
-
-## Compilar ##
-```
-  make
-  make run
-```
